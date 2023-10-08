@@ -1,22 +1,9 @@
-// const inquirer = require("inquirer");
 
-// // TODO: Include packages needed for this application
-// // TODO: Create an array of questions for user input
-// const questions = [];
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
 
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateREADME = ({ Project, why, what, learn, installation, usage, screeshot1, screenshot2, collaborators, thirdparty, license, test, badges, github, email,}) =>
+const generateREADME = ({ Project, why, what, learn, installation, usage, collaborators, thirdparty, license, test, badges, github, email,}) =>
   `🏆##Procject title: ${Project}
 
   ## Description
@@ -44,7 +31,6 @@ const generateREADME = ({ Project, why, what, learn, installation, usage, screes
   
     ${usage}
   
-   ${screeshot1}
   
    
   
