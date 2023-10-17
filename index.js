@@ -4,7 +4,7 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 const generateREADME = ({ Project, why, what, learn, installation, usage, collaborators, thirdparty, license, test, badges, github, email,}) =>
-  `🏆##Procject title: ${Project}
+  `## 🏆 Procject title: ${Project}
 
   ## Description
 
@@ -94,12 +94,7 @@ inquirer
     {
       type: 'input',
       name: 'usage',
-      message: 'Provide instructions and examples for use. Include screenshots as needed.',
-    },
-    {
-        type: 'input',
-        name: 'screeshot1',
-        message: 'To add a screenshot, create an assets/screenshots folder. Then follow this syntax  ![alt text](assets/images/screenshot.png)'
+      message: 'Provide instructions and examples for use. .',
     },
     {
         type: 'input',
@@ -121,11 +116,6 @@ inquirer
       name: 'badges',
       message: 'If you have any badges assign them here.'
   },
-  // {
-  //     type: 'input',
-  //     name: 'test',
-  //     message: 'Instructions on how to test it'
-  // },
   {
       type: 'input',
       name: 'github',
@@ -138,9 +128,9 @@ inquirer
 },
   ])
   .then((answers) => {
-    const htmlPageContent = generateREADME(answers);
+    const readMeContent = generateREADME(answers);
 
-    fs.writeFile('README.md', htmlPageContent, (err) =>
+    fs.writeFile('README.md', readMeContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README.md')
     );
   });
