@@ -54,9 +54,6 @@ const generateREADME = ({ Project, why, what, learn, installation, usage, collab
 
   ${badges}
 
-  ## Test
-  
-  ${test}
   
   ## Questions
   
@@ -94,7 +91,7 @@ inquirer
     {
       type: 'input',
       name: 'usage',
-      message: 'Provide instructions and examples for use. .',
+      message: 'Provide instructions and examples for use.',
     },
     {
         type: 'input',
